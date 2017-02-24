@@ -2,6 +2,7 @@
 SumoLogic Model
 '''
 import config
+import json
 import logging
 import requests
 import sumologic.sumologic
@@ -104,6 +105,25 @@ class SumoLogicModel:
         self._sumologic.collectors()
         return True
 
-    def put_alert_event(self, alert, hostname):
+    def put_alert_event(self, alert):
         '''Put alert data into SumoLogic'''
-        return
+        collector_id = self._get_collector_id_by_name(SUMOLOGIC_COLLECTOR_NAME)
+
+        sources = self._sumologic.sources(collector_id)
+        for s in sources:
+            if s.get('name') == SUMOLOGIC_SOURCE_NAME:
+                endpoint = s.get('url')
+
+        r = requests.post(
+            endpoint,
+            json=alert,
+            headers={'Content-Type': 'application/json'},
+            auth=(SUMOLOGIC_ACCESS_ID, SUMOLOGIC_ACCESS_KEY)
+        )
+
+        if r.ok:
+            success = True
+        else:
+            success = False
+        return success
+

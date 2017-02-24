@@ -43,15 +43,10 @@ def put_alert():
     for alert in webhook_data.get('alerts'):
         ts = threatstack_model.ThreatStackModel()
         alert_full = ts.get_alert_by_id(alert.get('id'))
-        if alert_full.get('agent_id'):
-            agent = ts.get_agent_by_id(alert_full.get('agent_id'))
-            hostname = agent.get('hostname')
-        else:
-            hostname = None
 
         sl = sumologic_model.SumoLogicModel()
-        sumologic_response = sl.put_alert_event(alert_full, hostname)
-        sumologic_response_list.append(sumologic_response)
+        sumologic_response = sl.put_alert_event(alert_full)
+        sumologic_response_list.append({alert.get('id'): sumologic_response})
 
     status_code = 200
     success = True
