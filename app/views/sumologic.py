@@ -17,6 +17,7 @@ def is_available():
     '''
     Test that Threat Stack and sumologic bucket are reachable.
     '''
+    _logger.info('{}: {}'.format(request.method, request.path))
     sl = sumologic_model.SumoLogicModel()
     sumologic_status = sl.is_available()
     sumologic_info = {'success': sumologic_status}
@@ -38,6 +39,9 @@ def put_alert():
     '''
     Archive Threat Stack alerts to sumologic.
     '''
+    _logger.info('{}: {} - {}'.format(request.method,
+                                      request.path,
+                                      request.data))
     sumologic_response_list = []
     webhook_data = request.get_json()
     for alert in webhook_data.get('alerts'):
