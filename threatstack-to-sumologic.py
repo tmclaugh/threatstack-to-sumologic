@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from app import create_app
-import app.models.sumologic as sumologic_model
+import app.models.sumo as sumologic_model
 import logging
 from logging.config import fileConfig
 import os

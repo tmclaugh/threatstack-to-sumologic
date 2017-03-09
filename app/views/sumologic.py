@@ -4,7 +4,7 @@ Send alert events to sumologic.
 
 from flask import Blueprint, jsonify, request
 import logging
-import app.models.sumologic as sumologic_model
+import app.models.sumo as sumologic_model
 import app.models.threatstack as threatstack_model
 from app.sns import check_aws_sns
 
