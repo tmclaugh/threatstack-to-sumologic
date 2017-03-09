@@ -5,7 +5,7 @@ import config
 import json
 import logging
 import requests
-import sumologic.sumologic
+import sumologic
 
 _logger = logging.getLogger(__name__)
 
@@ -25,7 +25,7 @@ class SumoLogicModel:
                  access_id=SUMOLOGIC_ACCESS_ID,
                  access_key=SUMOLOGIC_ACCESS_KEY):
 
-        self._sumologic = sumologic.sumologic.SumoLogic(
+        self._sumologic = sumologic.SumoLogic(
             accessId=access_id,
             accessKey=access_key
         )
