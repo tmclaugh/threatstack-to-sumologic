@@ -11,7 +11,9 @@ def _initialize_blueprints(application):
     Register Flask blueprints
     '''
     from app.views.sumologic import sumologic
-    application.register_blueprint(sumologic, url_prefix='/api/v1/sumologic')
+    application.register_blueprint(sumologic,
+        url_prefix='/threatstack-to-sumologic/api/v1/sumologic'
+    )
 
 def _initialize_errorhandlers(application):
     '''

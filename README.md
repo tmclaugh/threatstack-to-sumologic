@@ -88,7 +88,7 @@ $ sudo /hab/bin/hab tmclaugh/threatstack-to-sumologic
 ```
 
 ## API
-### POST https://_{host}_/api/v1/sumologic/alert
+### POST https://_{host}_/threatstack-to-sumologic/api/v1/sumologic/alert
 Post a JSON doc from Threat Stack and record an event in Sumo Logic.  JSON doc will be in the following format.  __NOTE__: A webhook may contain multiple alerts but this service will store each one individually.
 ```
 {
