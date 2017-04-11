@@ -6,7 +6,7 @@ Takes a Threat Stack web hook request and add an event to sumologic.
 ## Deployment
 This service can be deployed to AWS running on Lambda behind AWS API gateway by clicking "Launch Stack".
 [![Launch CloudFormation
-Stack](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=threatstack-to-sumologic&templateURL=https://s3.amazonaws.com/straycat-dhs-org-straycat-lamba-deploys/threatstack-to-sumologic.json)
+Stack](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=threatstack-to-sumologic&templateURL=https://s3.amazonaws.com/ts-demo-lamba-deploys/threatstack-to-sumologic.json)
 
 ## API
 ### POST https://_{host}_/threatstack-to-sumologic/api/v1/sumologic/alert
