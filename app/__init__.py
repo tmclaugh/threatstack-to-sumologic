@@ -1,7 +1,7 @@
 '''
 Assemble our service.
 '''
-from flask import Flask
+from flask_lambda import FlaskLambda
 import logging
 
 _logger = logging.getLogger(__name__)
@@ -11,7 +11,9 @@ def _initialize_blueprints(application):
     Register Flask blueprints
     '''
     from app.views.sumologic import sumologic
-    application.register_blueprint(sumologic, url_prefix='/api/v1/sumologic')
+    application.register_blueprint(sumologic,
+        url_prefix='/threatstack-to-sumologic/api/v1/sumologic'
+    )
 
 def _initialize_errorhandlers(application):
     '''
@@ -25,7 +27,7 @@ def create_app():
     Create an app by initializing components.
     '''
     _logger.info('Initializing application')
-    application = Flask(__name__)
+    application = FlaskLambda(__name__)
 
     _initialize_errorhandlers(application)
     _initialize_blueprints(application)

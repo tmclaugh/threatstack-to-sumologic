@@ -1,4 +1,6 @@
+boto3
 Flask
+flask-lambda
 gevent
 gunicorn
 requests
