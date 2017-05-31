@@ -18,7 +18,6 @@ deploy:
     secure: bB3FZTPtGae62UCzzqiMpKn5dqVxLl9GAmi9GgPjvoK3AO1V6YZ7Aq+R7y14/nlQAts8vvWYp0daQPQ/oWXxNVDr6bA5u8dpoqwOA4vbEMGV6yaRET3i0g0P9yba6OEGLhei7Ky03jdVZJlpqQIq8BbBU+ADW4w6o/bloNuv5mQONHVAz72Or8hTqm8TZQsg3ZK/5vOhzcRBZJiNa3M8/hHvxWfcuyarbGTX2FEkgQln4uxSkHV3Gjrdl3341GN5r+a4pj4zYUEPRLqnuUpGBsLKA9vEvd6FoJwLOwE1g6gwIfWc0xR1b3+JzY/Pp80NZVeeGf7j+rFL8+G29Gcd8iAbQB4zDJ5fJXBtFPv5bGczM2mlPvmv97XmpaAg82DCUEe7AzEhhL9XpbnSu5/UtEVD+IqjveBIwa7Aap3iSTmmgKaEe/62w1GSgUB8hFPS2tRVNGthr53IjF6g7nhPDCHuKovyb247/7uCjHlSvZRixvAlw0a3awhB2tlPZuC9FP3S+hELuvkslvUlJ2sS0lVcuCDhgj/Ami9jsRb822UHbU45u8ITLrGta4m1wvAfUYsmUp+fyGtVm6ohY9fm3zC6oPaRE1xdy+/bch1rkp5zAdYyKKHiZ3mC3dDKmmJVqVoNv+3ImdxYrYrBluPPP22PNseqJdVh3pDa57kxYMw=
   bucket: ts-demo-lamba-deploys
   local-dir: dist
-  upload-dir: 'no'
   acl: public_read
   on:
     repo: threatstack/threatstack-to-sumologic
