@@ -5,3 +5,4 @@ gevent
 gunicorn
 requests
 sumologic-sdk
+threatstack
